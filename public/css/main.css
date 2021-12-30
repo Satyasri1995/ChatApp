@@ -17,6 +17,7 @@ body{
     width: 80%;
     height: 90%;
     box-shadow: 0px 0px 5px 0px black;
+    border-radius: 5px;
 }
 
 .messageBox{
@@ -33,7 +34,7 @@ body{
     border-radius:32px;
     display: inline;
     width: fit-content;
-    
+    border-radius: 5px;   
 }
 
 .baloon .name{
@@ -48,4 +49,30 @@ body{
 
 .sent{
     align-self: flex-end;
+}
+
+.notification .line{
+    flex: 1;
+    height: 0px;
+}
+
+.notification .info{
+    margin: 0px 10px;
+}
+
+.notification.connect .line{
+    border: 1px dashed rgb(85, 245, 85);
+}
+
+.notification.disconnect .line{
+    border: 1px dashed rgb(245, 85, 85);
+}
+.notification.connect .info{
+    color: rgb(85, 245, 85);
+    font-weight: bold;
+}
+
+.notification.disconnect .info{
+    color: rgb(245, 85, 85);
+    font-weight: bold;
 }

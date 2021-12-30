@@ -12,13 +12,14 @@
         crossorigin="anonymous"></script>
     <title>Dvs Chat App</title>
     <link rel="stylesheet" href="/css/main.css">
+    <script src="/socket.io/socket.io.js"></script>
     <script src="/js/main.js"></script>
 </head>
 
 <body>
     <div class="chatBox d-flex flex-column">
         <div class="messageBox d-flex flex-column" id="message-box">
-            <div class="baloon receive d-flex flex-column">
+            <!-- <div class="baloon receive d-flex flex-column">
                 <span class="name">
                     Dvs
                 </span>
@@ -33,12 +34,20 @@
                 <span class="message">
                     Message sent by me
                 </span>
-            </div>
+            </div> -->
+            
         </div>
         <div class="messageControls d-flex flex-row">
             <div class="input-group m-3">
-                <input type="text" class="form-control" id="input-text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <input type="text" class="form-control" id="input-text" placeholder="Your message" >
                 <button class="btn btn-primary" type="button" id="sendMessage" onclick="sendMessage()">Send</button>
+              </div>
+        </div>
+        <div class="messageControls d-flex flex-row">
+            <div class="input-group m-3">
+                <input type="text" class="form-control" id="input-text2" placeholder="Room Name">
+                <button class="btn btn-primary" type="button" id="join-room" onclick="joinRoom()">Join</button>
+                <button class="btn btn-primary" type="button" id="leave-room" onclick="leaveRoom()">Leave</button>
               </div>
         </div>
     </div>
